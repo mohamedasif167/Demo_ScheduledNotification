@@ -22,6 +22,9 @@ public class ScheduledNotificationReceiver extends BroadcastReceiver {
         builder.setContentTitle("Amazing Offer!");
         builder.setContentText("Subject");
         builder.setSmallIcon(android.R.drawable.ic_dialog_info);
+       // This 1 is, when the user clicks on the notification
+        builder.setContentIntent(pIntent);
+        //To cancel
         builder.setAutoCancel(true);
 
         Notification n = builder.build();
